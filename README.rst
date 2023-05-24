@@ -39,7 +39,7 @@ See the scipy.stats documentation https://docs.scipy.org/doc/scipy/reference/sta
 Speed-up
 --------
 
-speed.py reports these numbers:
+speed.py reports these numbers::
 
 	norm.pdf       :  7.6x faster with scipy.stats=0.126s, this=0.015s
 	norm.logpdf    : 10.8x faster with scipy.stats=0.120s, this=0.010s
@@ -57,4 +57,6 @@ speed.py reports these numbers:
 Tests
 -----
 
-Systematic verification against scipy.stats is done in test.py
+Systematic verification against scipy.stats is done in test.py. Run with::
+
+	pytest test.py

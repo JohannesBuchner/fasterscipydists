@@ -62,7 +62,7 @@ class uniform(object):
     """Uniform distribution."""
 
     # provides compatibility with scipy.stats distributions when a parameter is fixed
-    def __init__(self, loc, scale):
+    def __init__(self, loc=0, scale=1):
         self.lo = loc
         self.hi = loc + scale
         self.scale = scale
@@ -91,7 +91,7 @@ class expon(object):
     """Faster exponential distribution than the scipy implementation."""
 
     # provides compatibility with scipy.stats distributions when a parameter is fixed
-    def __init__(self, scale):
+    def __init__(self, scale=1):
         self.scale = scale
         self.lam = 1. / scale
         self.loglam = np.log(self.lam)
@@ -119,7 +119,7 @@ class norm(object):
     """Faster Gaussian distribution than the scipy implementation."""
 
     # provides compatibility with scipy.stats distributions when a parameter is fixed
-    def __init__(self, loc, scale):
+    def __init__(self, loc=0, scale=1):
         assert np.all(scale > 0)
         self.scale = scale
         self.loc = loc
